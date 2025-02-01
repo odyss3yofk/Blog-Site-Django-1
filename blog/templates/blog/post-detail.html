@@ -12,6 +12,14 @@
 
 {% block content %}
 
+{% if comment_form.errors %}
+  <div id="alert">
+    <h2>Saving the comment failed!</h2>
+    <p>Please check the comment form below the post and fix your erros.</p>
+    <a href="#comment-form">Fix!</a>
+  </div>
+{% endif %}
+
 <section id="summary">
     <h2>{{post.title}}</h2>
     
@@ -36,5 +44,35 @@
 <main>
    {{post.content|linebreaks}}
 </main>
+
+<section id="comments">
+  <ul>
+    {% for comment in comments %}
+      <li>
+        <h2>{{ comment.user_name }}</h2>
+        <p>{{ comment.text|linebreaks }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="comment-form" >
+  <h2>Comment</h2>
+<div>
+  <form action="{% url "post-details-page" post.slug %}" method="POST">
+    {% csrf_token %}
+    {% for form_field in comment_form  %}
+    <div class="form-control {% if form_field.errors %}Invalid{% endif %}"> 
+
+      {{form_field.label_tag}}
+      {{form_field}}
+      {{form_field.errors}}
+     </div>
+    {% endfor %}
+    <button>Send</button>  
+  </form>
+</div>
+</section>
+
 
 {% endblock  %}
