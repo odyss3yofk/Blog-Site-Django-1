@@ -1,13 +1,29 @@
-body {
-
-    background-image: url('images/bgall.jpg');
-
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
+
+body {
+    background-image: url('images/bgall.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+
 #main-navigation {
-    background-color: #390281;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 #all-posts {
@@ -23,25 +39,38 @@ body {
     margin: 3rem 0;
 }
 
+
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
-
+    grid-template-columns: repeat(auto-fill, 17rem);
     gap: 1.5rem;
 }
+
 
 .post img {
     width: 7rem;
     height: 7rem;
+
 }
 
 .post a {
+    display: block;
+    width: 100%;
     height: 22rem;
-    transform-origin: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
     background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.post a:hover {
+    transform: scale(1.02);
 }

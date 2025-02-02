@@ -11,9 +11,9 @@
 
 .post a {
     display: flex;
-    /* Make the link a flex container */
+
     flex-direction: column;
-    /* Stack children vertically */
+
     width: 100%;
     height: 100%;
     text-decoration: none;
@@ -23,7 +23,7 @@
     border: 1px solid black;
     box-sizing: border-box;
     overflow: hidden;
-    /* Prevent content from overflowing */
+
 }
 
 .post a:hover,
@@ -39,30 +39,30 @@
     display: block;
     width: 100%;
     height: 15rem;
-    /* Fixed height for the image */
+
     object-fit: cover;
     flex-shrink: 0;
 }
 
 .post h3 {
     margin: 0.25rem 0;
-    /* Handle text overflow */
+
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    /* Show max 2 lines */
+
     -webkit-box-orient: vertical;
 }
 
 .post time {
     color: #666666;
     margin: 0.25rem 0;
-    /* Adjusted margin */
+
     font-style: italic;
     font-size: 0.85rem;
     flex-shrink: 0;
-    /* Prevent time from shrinking */
+
 }
 
 .post:hover time,

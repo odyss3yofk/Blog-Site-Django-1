@@ -17,9 +17,12 @@ My Blog
   <header>
     <img src="{% static "blog\images\kuldeep.jpg" %}" alt="Kuldeep - The Author Of This Blog" />
     <h2>TypeTyper</h2>
-  </header>
-  <p>Hi, I am Kuldeep , an engineering student.</p>
-  <p>And welcome to my Blog !</p>
+ </header>
+ <p>Hi, I am Kuldeep , an engineering student.
+  <br>
+  And welcome to my Blog !
+</p>
+  
 </section>
 
 <section id="latest-posts">
@@ -32,13 +35,28 @@ My Blog
   </ul>
 </section>
 
-<section id="about">
-  <h2>What I Do</h2>
-  <p>
-    Well nothing much really, I write a bit. Sometimes I code too. 
-  </p>
-  <p>
-    My goal is to keep on growing as a developer. Also maybe write a book someday !
-  </p>
-</section>
+<footer id="footer">
+  <div class="footer-container">
+    <h2>Stay Connected</h2>
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>
+          I'm a passionate developer who writes a bit and codes sometimes. 
+          Let's connect and grow together!
+        </p>
+        <p>
+          Email: <a href="mailto:kuldeepbora.k@gmail.com">kuldeepbora.k@gmail.com</a>
+        </p>
+      </div>
+      <div class="footer-social">
+        <a href="https://x.com/Co_oldeep" title="X">X.com</a>
+        <a href="https://www.linkedin.com/in/kuldeep-bora-11762b221/" title="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Kuldeep. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
 {% endblock %}
