@@ -21,6 +21,7 @@
 {% endif %}
 
 <section id="summary">
+  
     <h2>{{post.title}}</h2>
     
     <div>
@@ -31,10 +32,18 @@
 
       {%endfor%}
     </div>
+
+    <div id="read-later">
+      <form action="" >
+        {% csrf_token %}
+        <input type="hidden" value="{{ post.id }}" name="post_id">
+        <button>Read Later</button>
+      </form>
+    </div>
     
     <article>
         <img src="{{post.image.url}}" alt="{{post.title}}">
-        <address>By <a href="mailto:kuldeepbora.k@gmail.com"> {{post.author.email_address}}</a></address>
+        <address>By <a href="mailto:kuldeepbora.k@gmail.com"> {{post.author.first_name}}</a></address>
         <div>
            Last updated on <time>{{post.date| date:"d M Y"}}</time>
         </div>

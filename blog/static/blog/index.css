@@ -1,5 +1,12 @@
-#welcome {
+body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.jpg');
+    background-size: contain;
+
+}
+
+#welcome {
+
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -42,28 +49,34 @@
 
 #latest-posts {
     position: relative;
-    background: rgba(255, 255, 255, 0.1);
-
+    background: white;
     backdrop-filter: blur(10px);
 
     -webkit-backdrop-filter: blur(10px);
 
     padding: 20px;
     margin: -5rem auto 2rem auto;
-    width: 80%;
-    border-radius: 15px;
+    width: 100%;
+    border-radius: 0px;
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-    border: 1px solid rgba(255, 255, 255, 0.3);
+
 
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+
+    padding-bottom: 100px;
 
 }
 
 #latest-posts h2 {
-    color: #ffffff;
-    text-align: center;
+    color: #000000;
+    text-align: left;
+    font-size: 48px;
+
+    margin-top: -10px;
+
+
 }
 
 #latest-posts ul {
@@ -78,10 +91,21 @@
     flex: 1;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 17rem);
+    gap: 1.5rem;
+}
+
 #about {
+
+
     text-align: center;
     padding: 3rem;
-    background-color: #e48900;
+
     margin-top: 5rem;
 }
 

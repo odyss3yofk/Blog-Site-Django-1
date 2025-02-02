@@ -6,8 +6,13 @@ body {
 }
 
 #main-navigation {
-    background-color: #390281;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    z-index: 1000;
 }
 
 #all-posts {
@@ -28,8 +33,7 @@ ul {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
-
+    grid-template-columns: repeat(auto-fill, 17rem);
     gap: 1.5rem;
 }
 
@@ -39,9 +43,13 @@ ul {
 }
 
 .post a {
+    display: block;
+    width: 100%;
     height: 22rem;
+    box-sizing: border-box;
     transform-origin: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     background-color: white;
+    overflow: hidden;
 }
